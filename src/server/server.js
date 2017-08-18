@@ -5,6 +5,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
+import webhookHandler from '../services/webhook-handler';
 
 const server = express();
 
@@ -12,10 +13,7 @@ server.use(morgan('combined'));
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended: true}));
 
-server.all('/', (req,res) => {
-    console.log(req.body);
-    res.status(200).send('');
-});
+server.use('/', webhookHandler);
 
 
 server.listen(9000);
