@@ -50,6 +50,8 @@ typings/
 
 .idea
 
+dist
+
 # Output of 'npm pack'
 *.tgz
 

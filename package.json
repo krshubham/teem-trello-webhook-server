@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "babel-preset-env": "^1.6.0",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "request": "^2.81.0"
+  },
+  "name": "teem-trello-webhook-server",
+  "description": "The server which listens for changes in the Trello board model and simultaneously uodates them in the SwellRT object model",
+  "version": "0.0.1",
+  "main": "dist/server/server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krshubham/teem-trello-webhook-server.git"
+  },
+  "keywords": [
+    "teem",
+    "trello"
+  ],
+  "author": "krshubham",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/krshubham/teem-trello-webhook-server/issues"
+  },
+  "homepage": "https://github.com/krshubham/teem-trello-webhook-server#readme"
+}
