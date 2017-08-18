@@ -11,7 +11,7 @@ server.use(morgan('combined'));
 
 
 server.all('/', (req,res) => {
-    console.log(req);
+    res.send('Hello');
 });
 
 
