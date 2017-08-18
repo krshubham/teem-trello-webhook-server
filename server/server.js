@@ -14,6 +14,7 @@ server.use(bodyParser.urlencoded({extended: true}));
 
 server.all('/', (req,res) => {
     console.log(req.body);
+    res.status(200).send('');
 });
 
 
