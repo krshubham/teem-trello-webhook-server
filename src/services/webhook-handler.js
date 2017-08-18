@@ -20,7 +20,7 @@ function sendBlankString(req,res){
 }
 
 function getWebhookType(req,res){
-    console.log(req.body.type);
+    console.log(req.body);
     res.status(200).send('');
 };
 
