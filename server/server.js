@@ -4,14 +4,16 @@
 
 import express from 'express';
 import morgan from 'morgan';
+import bodyParser from 'body-parser';
 
 const server = express();
 
 server.use(morgan('combined'));
-
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({extended: true}));
 
 server.all('/', (req,res) => {
-    res.send('Hello');
+    console.log(req.body);
 });
 
 
