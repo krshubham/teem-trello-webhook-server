@@ -6,8 +6,8 @@ import express from 'express';
 
 const router = express.Router();
 
-router.post('/',getWebhookType);
 router.head('/',sendBlankString);
+router.post('/',getWebhookType);
 
 /**
  * This method hndles the request when the first time a webhook is created.
@@ -21,8 +21,7 @@ function sendBlankString(req,res){
 
 function getWebhookType(req,res){
     let webhookData = req.body;
-    let actionType = webhookData.type;
-    console.log(actionType);
+    console.log(webhookData);
 };
 
 
