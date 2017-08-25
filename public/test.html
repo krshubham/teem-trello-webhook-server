@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Test</title>
+</head>
+<body>
+
+</body>
+<script src="https://swellrt.teem.works/swellrt/swellrt.nocache.js"></script>
+<script>
+    function onSwellRTReady() {
+
+        SwellRT.useWebSocket(true);
+        SwellRT.startSession("http://swellrt.teem.works", SwellRT.user.ANONYMOUS, "",
+            function (session) {
+                document.title = 'Ready';
+
+            });
+
+    }
+</script>
+</html>

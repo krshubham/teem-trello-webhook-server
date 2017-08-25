@@ -3,6 +3,7 @@
  */
 
 import express from 'express';
+import createCard from './create-card';
 
 const router = express.Router();
 
@@ -20,7 +21,12 @@ function sendBlankString(req,res){
 }
 
 function getWebhookType(req,res){
-    console.log(req.body.action);
+    // console.log(req.body.action);
+    let actionType = req.body.action.type;
+    switch(actionType){
+        case 'createCard':
+            createCard(req.body,res);
+    }
     res.status(200).send('');
 };
 
